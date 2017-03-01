@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+/*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity
 //        }
         switch (position) {
             case 0:
-                getSupportFragmentManager().beginTransaction().add(R.id.comtent_main, new HomeFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.comtent_main, new HomeFragment()).addToBackStack(null).commit();
 
 //                fragmentManager = getSupportFragmentManager();
 //                fragmentTransaction = fragmentManager.beginTransaction();

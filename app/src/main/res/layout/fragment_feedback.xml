@@ -1,13 +1,44 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.android.ashutosh.ratatouille_theworldcuisines.FeedbackFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Feedback" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:numStars="5"
+        android:rating="4.0"
+        android:stepSize="1.0"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="148dp" />
+
+    <TextView
+        android:text="Rate Us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/ratingBar"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="72dp"
+        android:textSize="30sp"
+        android:id="@+id/textView" />
+
+        <Button android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_below="@+id/ratingBar"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent" />
+
+    </RelativeLayout>
+</ScrollView>
